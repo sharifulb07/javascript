@@ -1,0 +1,10 @@
+div{
+    margin-bottom: 1rem;
+}
+
+div input {
+    margin-left: 5rem;
+}
+div input #password{
+   left: 1rem;
+}
