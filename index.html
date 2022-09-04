@@ -8,18 +8,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   
-<h1>You can enjoy animation here </h1>
-    <div id="mydiv"> cool </div>
-<!-- 
-    <input type="text"> -->
 
-   <div id="myvideo">
+    
+<!-- <input type="text">
+<P>output</P> -->
+<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">Drag Me!</p>
+</div>
+<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)" id="dropt"></div>
 
-<video controls id="myvideo">
-    <source src="#">
-</video>
-   </div> 
-    <script src="index.js"></script>
+<p id="demo"></p>
+ <script src="index.js"></script>
 </body>
 </html>

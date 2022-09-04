@@ -15,7 +15,70 @@
 //     console.log("cool works "+event.target.log);
 // })
 
-var video=document.querySelector("#myvideo");
-video.addEventListener("canplay",function(){
-    alert("Can I play this video");
-})
+// var video=document.querySelector("#myvideo");
+// video.addEventListener("canplay",function(){
+//     alert("Can I play this video");
+// })
+
+// var input=document.querySelector("input");
+// input.addEventListener("change", takeInput);
+// function takeInput(){
+//     var x=document.querySelector("p");
+//     x.innerHTML=input.value.toLowerCase();
+// }
+// input.addEventListener("click", takeUpper);
+// function takeUpper(){
+//     var x=document.querySelector("p");
+//     x.innerHTML=input.value.toUpperCase();
+//     x.style.scale="500px";
+//     x.style.color="white";
+//     x.style.backgroundColor="tomato";
+//     x.style.width="500px";
+//     x.style.height="400px";
+//     x.style.borderRadius="10px";
+//     x.style.padding="15px";
+//     x.style.paddingTop="250px";
+//     x.style.paddingLeft="250px";
+//     x.style.fontSize="40px";
+
+// }
+
+
+// var input=document.querySelector("input");
+// input.addEventListener("copy", takeInput);
+
+// function takeInput(){
+//     var para=document.querySelector("p");
+//     input.style.backgroundColor="olive";
+//     para.innerHTML="You have copied  "+input.value;
+// }
+// var input=document.querySelector("input");
+// input.addEventListener("cut", takeInput);
+
+// function takeInput(){
+//     var para=document.querySelector("p");
+//     input.style.backgroundColor="blue";
+//     para.innerHTML="You have copied  "+input.value;
+// }
+// document.addEventListener("dragstart",dragStart);
+// document.addEventListener("dragover", dragging);
+// document.addEventListener("dragstart",dragStart);
+
+
+function dragStart(event){
+    event.dataTransfer.setData("Text", event.target.id);
+}
+function dragging(event){
+    document.getElementById("demo").innerHTML="The p element is being dragged";
+}
+function AllowDrop(event){
+event.preventDefault()
+}
+function drop(event){
+    event.preventDefault();
+   var data= event.dataTransfer.getData("Text");
+    event.target.appendChild(document.getElementById(data));
+    document.getElementById("demo").innerHTML="The p element was dropped";
+}
+
+
