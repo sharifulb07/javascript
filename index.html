@@ -4,26 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>js event functions </title>
-    <link rel="stylesheet" href="style.css">
+    <title>Various js Events practice </title>
 </head>
 <body>
+    <label for="" >Please Enter your name:</label>
+    <input type="text" onfocus="myFunc(this)" onfocusin="Todo">
 
-    
-<!-- <input type="text">
-<P>output</P> -->
-<p>This example uses the addEventListener() method to attach "dragstart", "dragenter", "dragleave", "dragover" and "drop" events to the document object.</p>
-<p>Drag the p element back and forth between the two rectangles:</p>
+    <label for="">Country Name: </label>
+    <input type="text" id="country" >
 
-<div class="droptarget">
-    <p draggable="true" id="dragtarget">Drag me!</p>
-</div>
-<div class="droptarget"></div>
+    <div id="demo"></div>
+<script>
+    function myFunc(x){
+        x.style.background="red";
+    }
 
-<p style="clear:both;"><strong>Note: </strong>drag events are not supported in internet explorer 8 and earlier version
-or Safari 5.1 and earlier versions</p>
 
-<p id="demo"></p>
- <script src="index.js"></script>
+    function Todo(y){
+        y.style.background="blue";
+
+    }
+</script>
+<script src="index.js"></script>
+
 </body>
 </html>
