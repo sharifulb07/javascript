@@ -1,33 +1,21 @@
-var x=document.querySelector(".mydiv");
+// const div=document.querySelector("#mydiv");
 
+// window.addEventListener("beforeprint", myprint);
 
-function anim(){
-    x.style.WebkitAnimation="mymove 4s 3";
-    x.style.animation="mymove 5s, 3";
+// function myprint(){
+//     alert("This is my print here ");
+// }
+// window.addEventListener("beforeunload", function (event){
+//     event.returnValue="This is my print before unloadhere ";
+//    });
 
-}
-// eventListner add here
+// var myName=document.querySelector("input");
+// myName.addEventListener("blur", function(event){
+    
+//     console.log("cool works "+event.target.log);
+// })
 
-x.addEventListener("webkitAnimationStart",animStart);
-x.addEventListener("webkitAnimationIteration",animIteration);
-// x.addEventListener("webkitAnimationEnd",animEnd);
-
-x.addEventListener("animationstart",animStart);
-x.addEventListener("animationiteration",animIteration);
-// x.addEventListener("animationend",animEnd);
-
-// various animation function
-
-function animStart(){
-    this.style.backgroundColor="pink";
-    this.innerHTML="animation Starts";
-}
-function animIteration(){
-    this.style.backgroundColor="blue";
-    this.innerHTML="animation iteration here";
-    this.style.animIteration="inifinite"
-}
-function animEnd(){
-    this.style.backgroundColor="yellow";
-    this.innerHTML="animation end";
-}
+var video=document.querySelector("#myvideo");
+video.addEventListener("canplay",function(){
+    alert("Can I play this video");
+})
