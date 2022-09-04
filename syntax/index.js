@@ -1,33 +1,39 @@
-// MouseEvent -<html,<head><meta>,<title>,<br>,style,iframe,para, base bd,</title></head>
-// onClick
-// ondblclick
-// onmousedown
-// onmouseup
-// onmouseenter
-// onmouseleave
-// onmousemove
-// onmouseover
+//DOM events 
+// Event Object
+//  -event type: change, submit, reset, load, unload, open, play, canplay,
+// pause, playing, progress, ended, volumechange, resize, scroll,
+// toggle (works with details),
+// beforeprint, afterprint etc.
+// properties: type, target, preventDefault()
+// 
+// MouseEvent Object
+// KeyboardEvent Object
+// FocusEvent Object
+// ClipboardEvent Object
+// DragEvent Object
+// 
+// keyboardEvent Object
+// 1. keydown --pressing a key, can repeat
+// 2. kleypress (may not supported by some browsers)
+// 3. keyup
+// some properties -key, keyCode, code, shiftKey, ctlKey, repeat
+
+const text=document.querySelector("textarea");
 
 
-const div=document.querySelector("div");
-div.addEventListener("click", function(){
-    console.log("click is clicked");
-});
-div.addEventListener("dblclick",function(){
-    console.log("double click is occured");
-});
-div.addEventListener("mouseover",function(){
-    console.log("mouse over is occured");
-});
-div.addEventListener("mousedown",function(){
-    console.log("mousedown is occured");
-});
-div.addEventListener("mouseenter",function(){
-    console.log("mouseenter is occured");
-});
-div.addEventListener("mouseleave",function(){
-    console.log("mouseleave is occured");
-});
-div.addEventListener("mousemove",function(){
-    console.log("mousemove is occured");
-});
+
+text.addEventListener("keydown", function(e){
+    console.log(`you have pressed ${e.code}`);
+})
+text.addEventListener("keyup", function(e){
+    console.log(`you have key pressed up ${e.keyCode}`);
+})
+text.addEventListener("keydown", function(e){
+    console.log(`you have pressed ${e.code}`);
+})
+text.addEventListener("keyup", function(e){
+    console.log(`you have pressed ${e.ctrlKey}`);
+})
+
+
+
