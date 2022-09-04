@@ -65,20 +65,54 @@
 // document.addEventListener("dragstart",dragStart);
 
 
-function dragStart(event){
-    event.dataTransfer.setData("Text", event.target.id);
-}
-function dragging(event){
-    document.getElementById("demo").innerHTML="The p element is being dragged";
-}
-function AllowDrop(event){
-event.preventDefault()
-}
-function drop(event){
+// function dragStart(event){
+//     event.dataTransfer.setData("Text", event.target.id);
+// }
+// function dragging(event){
+//     document.getElementById("demo").innerHTML="The p element is being dragged";
+// }
+// function AllowDrop(event){
+// event.preventDefault()
+// }
+// function drop(event){
+//     event.preventDefault();
+//    var data= event.dataTransfer.getData("Text");
+//     event.target.appendChild(document.getElementById(data));
+//     document.getElementById("demo").innerHTML="The p element was dropped";
+// }
+
+document.addEventListener("dragstart",function(event){
+    event.dataTransfer.setData("Text",event.target.id);
+});
+document.addEventListener("dragenter",function(event){
+    if(event.target.className=="droptarget"){
+        document.getElementById("demo").innerHTML="You have enter into the dropzone";
+        event.target.style.backgroundColor="lightblue";
+    }
+});
+
+document.addEventListener("dragover",function(event){
     event.preventDefault();
-   var data= event.dataTransfer.getData("Text");
-    event.target.appendChild(document.getElementById(data));
-    document.getElementById("demo").innerHTML="The p element was dropped";
-}
+});
+
+document.addEventListener("dragleave",function(event){
+    if(event.target.className=="droptarget"){
+        document.getElementById("demo").innerHTML="You have enter into the dropzone";
+        event.target.style.backgroundColor="";
+    }
+});
+document.addEventListener("drop",function(event){
+    event.preventDefault();
+    if(event.target.className=="droptarget"){
+        
+        event.target.style.backgroundColor="";
+        var data=event.dataTransfer.getData("Text");
+        event.target.appendChild(document.getElementById(data));
+
+    }
+});
+
+
+
 
 

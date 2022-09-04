@@ -12,10 +12,16 @@
     
 <!-- <input type="text">
 <P>output</P> -->
-<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">Drag Me!</p>
+<p>This example uses the addEventListener() method to attach "dragstart", "dragenter", "dragleave", "dragover" and "drop" events to the document object.</p>
+<p>Drag the p element back and forth between the two rectangles:</p>
+
+<div class="droptarget">
+    <p draggable="true" id="dragtarget">Drag me!</p>
 </div>
-<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)" id="dropt"></div>
+<div class="droptarget"></div>
+
+<p style="clear:both;"><strong>Note: </strong>drag events are not supported in internet explorer 8 and earlier version
+or Safari 5.1 and earlier versions</p>
 
 <p id="demo"></p>
  <script src="index.js"></script>
