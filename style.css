@@ -1,0 +1,15 @@
+textarea{
+    margin: 10px;
+    border: 2px solid deepskyblue;
+    border-radius: 20px;
+    margin-left: 250px;
+    margin-top: 250px;
+}
+button{
+    margin: 10px;
+    border: 2px solid deepskyblue;
+    border-radius: 20px;
+    margin-left: 350px;
+    padding: 40px;
+    background-color: transparent slateblue;
+}
