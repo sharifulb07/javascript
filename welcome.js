@@ -1,4 +1,39 @@
 
+// the largest prime factor of a number
+
+function LPrimeFactor(num){
+
+  let maxPrime=-1;
+
+  while(num%2==0){
+    maxPrime=2;
+    num/=2
+  }
+
+
+  for(let i=3;i*i<=num;i+=2){
+    while(num%i===0){
+
+      maxPrime=i;
+      num/=i
+    }
+  }
+
+  if(num>2){
+    maxPrime=num
+  }
+
+  return maxPrime
+}
+
+
+const result=LPrimeFactor(125489)
+console.log(result)
+
+
+
+
+
 
 
 
