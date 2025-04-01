@@ -1,4 +1,178 @@
 
+// function groupById(users){
+
+   
+//   let result= users.reduce((prev,user)=>{
+//     prev[user.id]=user;
+//     return prev
+//    },{})
+//    return result
+// }
+
+// let users = [
+//     {id: 'john', name: "John Smith", age: 20},
+//     {id: 'ann', name: "Ann Smith", age: 24},
+//     {id: 'pete', name: "Pete Peterson", age: 31},
+//   ];
+  
+//   let usersById = groupById(users);
+//   console.log(usersById)
+  
+//   /*
+//   // after the call we should have:
+  
+//   usersById = {
+//     john: {id: 'john', name: "John Smith", age: 20},
+//     ann: {id: 'ann', name: "Ann Smith", age: 24},
+//     pete: {id: 'pete', name: "Pete Peterson", age: 31},
+//   }
+//   */
+
+
+
+
+
+
+
+
+
+// function unique(arr) {
+//    let temp=[]
+//    let result= arr.map(a=>a.includes('H') && temp.push(a))
+//    return temp
+
+//   }
+  
+//   let strings = ["Mare", "Krishna", "Hare", "Krishna",
+//     "Krishna", "Krishna", "Hare", "Hare", ":-O"
+//   ];
+
+
+//   console.log(unique(strings))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function Shuffle(arr){
+//     return arr.reduce((prev, a)=>prev+a.age,0)/arr.length;
+// }
+
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 29 };
+
+// let arr = [john, pete, mary];
+
+
+// let result=Shuffle(arr);
+// console.log(result)
+
+
+
+
+
+
+
+
+// function Shuffle(arr){
+//     for(let i=0;i<arr.length;i++){
+//         let j=Math.floor(Math.random()*(i+1));
+
+//         [arr[i], arr[j]]=[arr[j], arr[i]];
+//     }
+//     return arr;
+// }
+
+// let arr=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+// let result=Shuffle(arr)
+// console.log(result)
+
+// function Shuffle(arr){
+//     return arr.sort(()=>Math.random()-0.5)
+// }
+
+// let arr=[1,2,3,4,5,6,8]
+// let result =Shuffle(arr);
+// console.log(result)
+
+// class Calculator{
+//      str=''
+//      constructor(str){
+//         this.str=str;
+//      }
+
+//      Calculate(){
+//         let arr=this.str.split(' ');
+// console.log(arr)
+//         let a=Number(arr[0])
+//         let operator=arr[1]
+//         let b=Number(arr[2])
+
+//         if(!operator || isNaN(a) || isNaN(b)){
+//             return NaN
+//         }
+//         if(String(operator)=='+'){
+// return a+b;
+//         }else if(String(operator)=='-'){
+//             return a-b
+//         }else if(String(operator)=='*'){
+//             return a*b
+//         }else if(String(operator)=='/'){
+//             return a/b
+//         }
+
+//         // console.log(arr[0])
+//         // console.log(arr[1])
+//         // console.log(arr[2])
+//      }
+// }
+
+// const func=new Calculator('405 + 9576')
+// const result=func.Calculate();
+// console.log(result)
+
+// function filterRangeInPlace(arr, a,b){
+
+//     for(let i=0;i<arr.length;i++){
+//         console.log(arr.length)
+//         let val=arr[i];
+
+//         if(val<a || val>b){
+//             arr.splice(i,1);
+//             i--;
+//         }
+//     }
+//     console.log(arr.length)
+//     return arr;
+// }
+
+// let arr=[2,50,6,3,9,80,56,70,45,90,11,24]
+
+// let result=filterRangeInPlace(arr, 2,9)
+// console.log(result)
+
+// function filterRange(arr,a,b){
+//     return arr.filter(val=>val>=a && val<=b)
+// }
+
+// let arr = [5, 3, 8, 1,4];
+
+// let filtered = filterRange(arr, 1, 4);
+
+// console.log(filtered)
 
 // class Calculator{
 //     str=''
@@ -20,7 +194,6 @@
 // let result=nCal.calculate()
 // console.log(result)
 
-
 // function filterInPlace(arr,a,b){
 
 //     for(let i=0;i<arr.length;i++){
@@ -39,7 +212,6 @@
 
 // let result=filterInPlace(arr,a,b)
 // console.log(result)
-
 
 // function camelCase(str) {
 //   return str
