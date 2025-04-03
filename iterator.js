@@ -1,4 +1,59 @@
 
+
+
+
+
+
+
+
+let set=new Set(["oranges", "apples", "bananas"]);
+
+
+// console.log(set.entries())
+// console.log(set.keys())
+// console.log(set.values())
+
+
+// for(let value of set){
+//     console.log(value)
+// }
+
+// set.forEach((value, valueAgain,set)=>{
+// console.log(set, value)
+// })
+
+
+
+// let set=new Set()
+// let john={name:"John"}
+// let james={name:"James"}
+// let mary={name:"Mary"}
+
+
+// set.add(john)
+// set.add(james)
+// set.add(mary)
+
+// console.log(set.size)
+
+// for(let user of set){
+//     console.log(user.name)
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // let prices = Object.fromEntries([
 //     ['banana', 1],
 //     ['orange', 2],
@@ -9,15 +64,15 @@
 
 
 
-let obj={
-    name:"Shariful",
-    age:121
-}
+// let obj={
+//     name:"Shariful",
+//     age:121
+// }
 
 
-let newMap=new Map(Object.entries(obj))
+// let newMap=new Map(Object.entries(obj))
 
-console.log(Map.toString())
+// console.log(Map.toString())
 
 // console.log(newMap.get('name'))
 // console.log(newMap.get('age'))
